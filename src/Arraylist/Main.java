@@ -18,8 +18,22 @@ public class Main {
         System.out.println(numbers.indexof(30));
 
         ArrayList.ListIterator li = numbers.listIterator();
+        /*
         while (li.hasNext()) {
             System.out.println(li.next());
         }
+         */
+        /*
+        while (li.hasPrevious()) {
+            System.out.println(li.previous());
+        }
+         */
+        li.next();
+        li.next();
+        li.next();
+        li.previous();
+        li.previous();
+        li.previous();
+
     }
 }

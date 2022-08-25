@@ -82,6 +82,15 @@ public class ArrayList {
     class ListIterator{
         private int nextIndex = 0;
 
+
+        public boolean hasNext(){
+            return nextIndex < size();
+        }
+
+        public boolean hasPrevious(){
+            return nextIndex > 0;
+        }
+
         public Object next(){
             /*
             Object returnData =  elementData[nextIndex];
@@ -90,8 +99,8 @@ public class ArrayList {
             return elementData[nextIndex++];
         }
 
-        public boolean hasNext(){
-            return nextIndex < size();
+        public Object previous(){
+            return elementData[--nextIndex];
         }
     }
 
