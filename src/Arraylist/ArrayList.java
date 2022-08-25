@@ -58,4 +58,41 @@ public class ArrayList {
         return remove(size-1);
     }
 
+    public Object get(int index){
+        return elementData[index];
+    }
+
+    public int size(){
+        return size;
+    }
+
+    public int indexof(Object obj){
+        for (int i = 0; i<size; i++){
+            if (obj.equals(elementData[i])){
+                return i;
+            }
+        }
+        return -1;
+    }
+
+    public ListIterator listIterator() {
+        return new ListIterator();
+    }
+
+    class ListIterator{
+        private int nextIndex = 0;
+
+        public Object next(){
+            /*
+            Object returnData =  elementData[nextIndex];
+            nextIndex++;
+             */
+            return elementData[nextIndex++];
+        }
+
+        public boolean hasNext(){
+            return nextIndex < size();
+        }
+    }
+
 }
