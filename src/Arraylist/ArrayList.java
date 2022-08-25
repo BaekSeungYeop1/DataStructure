@@ -22,8 +22,20 @@ public class ArrayList {
         for (int i = size-1; i>=index ; i--){
             elementData[i+1] = elementData[i];
         }
-
+        elementData[index] = element;
+        size++;
         return true;
+    }
+
+    public String toString(){
+        String str = "[";
+        for (int i = 0; i<size; i++){
+            str += elementData[i];
+            if (i < size-1) {
+                str += ',';
+            }
+        }
+        return str + "]";
     }
 
 }
