@@ -35,5 +35,21 @@ public class Main {
         li.previous();
         li.previous();
 
+        while(li.hasNext()){
+            int number = (int)li.next();
+            if (number == 30){
+                li.add(35);
+            }
+        }
+        System.out.println(numbers);
+
+        while(li.hasNext()){
+            int number = (int)li.next();
+            if (number == 30){
+                li.remove();
+            }
+        }
+        System.out.println(numbers);
+
     }
 }
