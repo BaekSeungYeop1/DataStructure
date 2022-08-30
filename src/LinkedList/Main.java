@@ -7,10 +7,9 @@ public class Main {
         numbers.addLast(20);
         numbers.addLast(30);
         numbers.add(1,15);
-        System.out.println(numbers.size());
-        System.out.println(numbers.get(2));
-        System.out.println(numbers.indexOf(5));
-        
-
+        LinkedList.ListIterator i = numbers.listIterator();
+        System.out.println(i.next());
+        System.out.println(i.next());
+        System.out.println(i.next());
     }
 }
