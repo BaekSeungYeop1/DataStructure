@@ -7,7 +7,6 @@ public class LinkedList {
     private Node tail;
     private int size = 0;
 
-
     private class Node {
         private Object data;
         private Node next;
@@ -80,6 +79,15 @@ public class LinkedList {
         }
         str += temp.data;
         return str +"]";
+    }
+
+    public Object removeFirst(){
+        Node temp = head;
+        head = head.next;
+        Object returnData = temp.data;
+        temp = null;
+        size--;
+        return returnData;
     }
 
 }

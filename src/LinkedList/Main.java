@@ -7,6 +7,7 @@ public class Main {
         numbers.addLast(20);
         numbers.addLast(30);
         numbers.add(1,15);
+        System.out.println(numbers.removeFirst());
         System.out.println(numbers);
         
 
