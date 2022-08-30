@@ -9,6 +9,7 @@ public class Main {
         numbers.add(1,15);
         System.out.println(numbers.size());
         System.out.println(numbers.get(2));
+        System.out.println(numbers.indexOf(5));
         
 
     }

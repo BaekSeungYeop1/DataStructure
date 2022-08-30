@@ -118,4 +118,17 @@ public class LinkedList {
         return temp.data;
     }
 
+    public int indexOf(Object data){
+        Node temp = head;
+        int index = 0;
+        while (temp.data != data) {
+            temp = temp.next;
+            index++;
+            if (temp == null){
+                return  -1;
+            }
+        }
+        return index;
+    }
+
 }
