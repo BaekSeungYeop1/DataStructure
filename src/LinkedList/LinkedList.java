@@ -147,6 +147,12 @@ public class LinkedList {
             nextIndex++;
             return lastReturned.data;
         }
+
+        public boolean hasNext(){
+            return nextIndex < size();
+        }
+
     }
+
 
 }
