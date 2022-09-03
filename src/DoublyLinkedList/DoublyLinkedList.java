@@ -171,6 +171,20 @@ public class DoublyLinkedList {
             return lastReturned.data;
         }
 
+        public boolean hasPrevious(){
+            return nextIndex > 0;
+        }
+        public Object previous(){
+            if (next == null){
+                lastReturned = next = tail;
+            }
+            else {
+                lastReturned = next = next.prev;
+            }
+            nextIndex--;
+            return lastReturned.data;
+        }
+
         public boolean hasNext(){
             return nextIndex < size();
         }
