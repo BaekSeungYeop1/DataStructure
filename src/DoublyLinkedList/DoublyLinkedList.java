@@ -104,6 +104,9 @@ public class DoublyLinkedList {
         head = head.next;
         Object returnData = temp.data;
         temp = null;
+        if (head != null){
+            head.prev = null;
+        }
         size--;
         return returnData;
     }
@@ -115,6 +118,7 @@ public class DoublyLinkedList {
         Node temp = node(k -1);
         Node todoDeleted = temp.next;
         temp.next = temp.next.next;
+        temp.next.prev = temp;
         Object returnData = todoDeleted.data;
         if(todoDeleted == tail){
             tail = temp;
