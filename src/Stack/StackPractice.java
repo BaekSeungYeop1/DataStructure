@@ -5,6 +5,7 @@ import java.util.Stack;
 public class StackPractice {
     public static void main(String args[]){
         Stack<Integer> stack = new Stack<>();
+        int sum = 0;
 
 // 데이터 삽입
         stack.push(1);
@@ -12,6 +13,8 @@ public class StackPractice {
         stack.push(3);
 
 // 데이터 출력
+        sum += stack.peek();
+        System.out.println(sum);
         stack.peek(); // 3 출력 (맨 위의 값 출력)
 
 // 데이터 삭제
